@@ -1,3 +1,3 @@
 def call(){
-  echo "hey  como estas?"
+    sh "echo hey  como estas?"
 }// prueba d
