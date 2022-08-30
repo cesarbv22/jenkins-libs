@@ -1,3 +1,3 @@
-def call(String name,String day){
-    sh "echo hey  como estas ${name}. Hoy es ${day}?"
+def call(Map config = [:]){
+    sh "echo hey  como estas ${config.name}. Hoy es ${config.day}?"
 }// prueba d
