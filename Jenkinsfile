@@ -10,9 +10,9 @@ def qualityGateValidation(qg) {
 pipeline{
     agent any
 
-    // tools{
-    //     nodejs 'nodejs'
-    // }
+    tools{
+        nodejs 'nodejs'
+    }
 
     environment {//
       PROJECT_ROOT = 'express-mysql/app'
