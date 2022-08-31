@@ -1,4 +1,3 @@
 def call (){
-     helloLoadScript(name: 'hello.sh') //Llamo al comando que ocupo para ejecutar el recurso de echo
-     sh "./hello.sh" // por lo que entiendo este es el intérprete de comandos
+   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/cesarbv22/docker-pirate']]])
 }

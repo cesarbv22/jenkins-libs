@@ -18,7 +18,8 @@ pipeline{
 
         stage('Checkout'){// este no estoy tan seguro de como adaptarlo
             steps{
-                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/cesarbv22/docker-pirate']]])
+              //   checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/cesarbv22/docker-pirate']]])
+              checkProject()
             }
         }
     }
