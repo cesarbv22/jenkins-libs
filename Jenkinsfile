@@ -38,43 +38,49 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                // installDependencies(project_root: PROJECT_ROOT)// aqui iria la variable de enntorno
-               echo "${PROJECT_ROOT} PRUEBA"
+              echo "${PROJECT_ROOT} Instalar dependencias"
             }
         }
-        //  stage('Unit test'){
-        //     steps{
-        //         unitTest(project_root: "express-mysql/app")// poner la ruta en variable
-        //     }
-        // }
-        //  stage('Generate coverage report'){
-        //     steps{
-        //         coverageProject()
-        //     }
-        // }
-        //  stage('Scan'){
-        //      environment {//variable de entorno
-        //         scannerHome = tool 'sonar-scanner' //sonar-scanner es el nombre que se puso cuando se configuró el plugin en jenkins
-        //     }
-        //     steps{
-        //         withSonarQubeEnv('sonarqube') {
-        //             scanningProject(scannerHome:"mandar el scaner de tools",buildNumber:"BUILD_NUMBER",project_root:)
-        //         }
-        //         timeout(time: 3, unit: 'MINUTES') {
-        //       // In case of SonarQube failure or direct timeout exceed, stop Pipeline
-        //             waitForQualityGate abortPipeline: qualityGateValidation(waitForQualityGate())
-        //         }
-        //     }
-        // }
+         stage('Unit test'){
+            steps{
+                //unitTest(project_root: PROJECT_ROOT)// poner la ruta en variable
+                echo "${PROJECT_ROOT} Pruebas unitarias"
+            }
+        }
+         stage('Generate coverage report'){
+            steps{
+                //coverageProject(project_root: PROJECT_ROOT)
+                echo "${PROJECT_ROOT} Run coverage"
+            }
+        }
 
-        // stage('Build Docker-image'){
-        //     steps{
-        //         buildProject(project_root:"ruta del proyecto",registry:"registro",build_number:"build number")
-        //     }
-        // }
-        // stage('Deploy Docker-image'){
-        //     steps{
-        //         //deployProject()
-        //     }
-        // }        
+         stage('Scan'){
+             environment {//variable de entorno
+                scannerHome = tool 'sonar-scanner' //sonar-scanner es el nombre que se puso cuando se configuró el plugin en jenkins
+            }
+            steps{
+                // withSonarQubeEnv('sonarqube') {
+                //     scanningProject(scannerHome:"${scannerHome}",buildNumber:"${BUILD_NUMBER}",project_root: "${PROJECT_ROOT}" )
+                // }
+                // timeout(time: 3, unit: 'MINUTES') {
+             
+                //     waitForQualityGate abortPipeline: qualityGateValidation(waitForQualityGate())
+                // }
+                 echo "${scannerHome}-- ${BUILD_NUMBER}--- ${PROJECT_ROOT} Scaneo"
+            }
+        }
+
+        stage('Build Docker-image'){
+            steps{
+               // buildProject(project_root:"${PROJECT_ROOT}",registry:"${REGISTRY}",build_number:"${BUILD_NUMBER}")
+               echo "${PROJECT_ROOT}-- ${REGISTRY}-- ${BUILD_NUMBER} Build Docker IMAGE"
+            }
+        }
+        stage('Deploy Docker-image'){
+            steps{
+                //deployProject(project_root:"${PROJECT_ROOT}",build_number:"${BUILD_NUMBER}")
+                echo "${PROJECT_ROOT}-- ${REGISTRY}-- ${BUILD_NUMBER} DEPLOY IMAGE DOCKER"
+            }
+        }        
     }
 }
