@@ -1,1 +1,0 @@
-Documento de prueba para el repositorio de las librerías compartidas
