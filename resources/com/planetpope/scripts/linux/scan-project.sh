@@ -1,4 +1,4 @@
- sh "$1/bin/sonar-scanner \
+ sh $1/bin/sonar-scanner \
                           -Dsonar.projectKey=SimpleExpressExample:Test \
                           -Dsonar.projectName=SimpleExpressExample \
                           -Dsonar.projectVersion=0.0.$2 \
@@ -7,4 +7,4 @@
                           -Dsonar.login=admin \
                           -Dsonar.password=admin \
                           -Dsonar.tests=./$3/test \
-                          -Dsonar.javascript.lcov.reportPaths=./$3/coverage/lcov.info"
+                          -Dsonar.javascript.lcov.reportPaths=./$3/coverage/lcov.info
