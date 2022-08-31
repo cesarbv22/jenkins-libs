@@ -12,7 +12,7 @@ pipeline{
         //  stage('Hello'){
         //     steps {
         //       //  sh 'echo hello world'
-        //       hello(day:"Primer Stage Adaptado",name:"Prueba 1")
+        //       hello()
         //     }
         // }
     }
