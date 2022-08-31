@@ -23,35 +23,35 @@ pipeline{
             }
         }
 
-        stage('Install Dependencies'){
-            steps{
-                //installDependencies()
-            }
-        }
-         stage('Unit test'){
-            steps{
-                //unitTest()
-            }
-        }
-         stage('Coverage'){
-            steps{
-                //coverage()
-            }
-        }
-         stage('Scan'){
-            steps{
-                //scanningProject()
-            }
-        }
-        stage('Build Docker-image'){
-            steps{
-                //buildProject()
-            }
-        }
-        stage('Deploy Docker-image'){
-            steps{
-                //deployProject()
-            }
-        }        
+        // stage('Install Dependencies'){
+        //     steps{
+        //         //installDependencies()
+        //     }
+        // }
+        //  stage('Unit test'){
+        //     steps{
+        //         //unitTest()
+        //     }
+        // }
+        //  stage('Coverage'){
+        //     steps{
+        //         //coverage()
+        //     }
+        // }
+        //  stage('Scan'){
+        //     steps{
+        //         //scanningProject()
+        //     }
+        // }
+        // stage('Build Docker-image'){
+        //     steps{
+        //         //buildProject()
+        //     }
+        // }
+        // stage('Deploy Docker-image'){
+        //     steps{
+        //         //deployProject()
+        //     }
+        // }        
     }
 }
