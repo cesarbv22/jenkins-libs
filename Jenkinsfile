@@ -9,11 +9,11 @@ pipeline{
             }
         }
 
-        //  stage('Hello'){
-        //     steps {
-        //       //  sh 'echo hello world'
-        //       hello()
-        //     }
-        // }
+         stage('Hello'){
+            steps {
+              //  sh 'echo hello world'
+              hello()
+            }
+        }
     }
 }
