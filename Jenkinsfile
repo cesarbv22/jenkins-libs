@@ -1,17 +1,29 @@
 @Library("shared-library") _
 pipeline{
     agent any
+
+    // tools{
+    //     nodejs 'nodejs'
+    // }
+
+    environment {//
+      PROJECT_ROOT = 'express-mysql/app'
+      REGISTRY = 'cesarbv/docker-pirate-express'
+      /*
+      ESTRUCTURA DE LAS IMAGENES EN SU NOMBRE 
+        RegistryName/folderName/NFolderName/imageName:tag
+      */
+    }
+
     stages{ // stage 1 de ejemplo
         stage('example'){
             steps {
-              //  sh 'echo hello world'
               helloworld(day:"martes",name:"Marshall")
             }
         }
 
          stage('Hello'){
             steps {
-              //  sh 'echo hello world'
               hello()
             }
         }
@@ -23,11 +35,12 @@ pipeline{
             }
         }
 
-        // stage('Install Dependencies'){
-        //     steps{
-        //         installDependencies(project_root: "express-mysql/app")// aqui iria la variable de enntorno
-        //     }
-        // }
+        stage('Install Dependencies'){
+            steps{
+               // installDependencies(project_root: PROJECT_ROOT)// aqui iria la variable de enntorno
+               echo "${PROJECT_ROOT} PRUEBA"
+            }
+        }
         //  stage('Unit test'){
         //     steps{
         //         unitTest(project_root: "express-mysql/app")// poner la ruta en variable
