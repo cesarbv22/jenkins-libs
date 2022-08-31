@@ -28,11 +28,11 @@ pipeline{
                 installDependencies(project_root: "express-mysql/app")// aqui iria la variable de enntorno
             }
         }
-        //  stage('Unit test'){
-        //     steps{
-        //         //unitTest()
-        //     }
-        // }
+         stage('Unit test'){
+            steps{
+                unitTest(project_root: "express-mysql/app")
+            }
+        }
         //  stage('Coverage'){
         //     steps{
         //         //coverage()

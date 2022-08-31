@@ -1,0 +1,1 @@
+sh cd $1; npm run test
