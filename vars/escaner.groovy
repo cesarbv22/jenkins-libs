@@ -2,7 +2,7 @@ def call(Map config = [:]){
      // loadLinuxScript(name: 'scan-project.sh')
      // sh "./scan-project.sh ${config.scannerHome} ${config.buildNumber} ${config.project_root}" 
 
-     sh "${cofig.scannerHome}/bin/sonar-scanner \
+     sh "${cofig.homeScanner}/bin/sonar-scanner \
                            -Dsonar.projectKey=SimpleExpressExample:Test \
                            -Dsonar.projectName=SimpleExpressExample \
                            -Dsonar.projectVersion=0.0.${config.buildNumber} \
