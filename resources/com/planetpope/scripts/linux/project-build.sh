@@ -1,1 +1,1 @@
- sh cd ./$1;docker build -t $2:$3 . 
+sh cd ./$1;docker build -t $2:$3 . 
