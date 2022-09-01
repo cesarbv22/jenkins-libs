@@ -1,4 +1,4 @@
-@Library("shared-library") _
+@Library("shared-library") _ //ESTE PIPELINE ES SOLO DE REFERENCIA Y PRUEBA.
 def qualityGateValidation(qg) {
   if (qg.status != 'OK') {
     // emailext body: "WARNING SANTI: Code coverage is lower than 80% in Pipeline ${BUILD_NUMBER}", subject: 'Error Sonar Scan,   Quality Gate', to: "${EMAIL_ADDRESS}"
