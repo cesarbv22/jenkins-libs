@@ -95,5 +95,4 @@ pipeline{
 
 /*
 docker run -it -d -p 3001:3000 --name prueba-corregida ID-IMAGEN
-
 */
