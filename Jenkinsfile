@@ -95,4 +95,6 @@ pipeline{
 
 /*
 docker run -it -d -p 3001:3000 --name prueba-corregida ID-IMAGEN
+https://bcrtfs/tfs/BCRCollection/TPBCRComercialApp/_build/results?buildId=4531&view=logs&j=ce044509-9268-53e4-90ba-56dddecd4f72&t=a7614a8a-2a4b-5f03-233c-1fa1ae17e756&l=57
+ https://dl.google.com/dl/android/maven2/com/huawei/agconnect/agcp/1.4.1.300/agcp-1.4.1.300.pom
 */
